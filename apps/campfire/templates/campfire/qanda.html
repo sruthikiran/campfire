@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campfire</title>
+    <link href="https://fonts.googleapis.com/css?family=Markazi+Text|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mandali" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href={% static "campfire/css/campfire.css" %}>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script>
+            $(document).ready(function(){
+                $('#smallnav').hide();
+                $("#navdownbtn").click(function(){
+                    $("#smallnav").slideToggle(100);
+                });
+            });
+        </script>
+</head>
+<body>
+    <div class="appbody">
+        <div class="bodycontainer">
+            <div class="appheader">
+                <button id="navdownbtn" class="icon">&#9776;</button>
+                <div id="smallnav">
+                    <a href="/articles">Articles</a>
+                    <a href="/qanda">Q & A</a>
+                    <a href="/network">Network</a>
+                    <a href="/inbox">Inbox</a>
+                    <a href="#activityfeed">Activity Feed</a>
+                    <a href="/profile">My Profile</a>
+                    <a id="lastsmnav" href="logout">Logout</a>
+                </div>
+                <h1>Campfire</h1>
+                <img src={% static "campfire/img/logo.png" %}>
+            </div>
+            <div id="largenav">
+                <a href="/articles">Articles</a>
+                <a id="active" href="/qanda">Q & A</a>
+                <a href="/network">Network</a>
+                <a href="/inbox">Inbox</a>
+                <a href="#activityfeed">Activity Feed</a>
+                <a href="/profile">My Profile</a>
+                <a href="logout">Logout</a>
+            </div>
+            
+            <div class="qandabody">
+              <button class="qabtn" type="submit">
+                <a href="addQuestion"> Add a Question</a> 
+              </button>
+              
+              {% if all_questions %}
+                {% for question in all_questions %}
+                  <div class="questioncontainer">
+                    <div class="vote">
+                      <a href="#">
+                        <i class="material-icons" style="font-size: 4vw">thumbs_up_down</i>
+                      </a>
+                    </div>
+                  <a href="{{question.id}}/addAnswer">
+                    <div class="question">
+                      <h3>{{question.title}}</h3>
+                      <p>{{question.desc|safe}}</p>
+                      <h4>Tags:</h4>
+                        {% for tag in question.tags.all %}
+                          <p class="tag">{{tag.name}}</p>
+                        {% endfor %}
+                      <p>Asked at {{question.created_at}} by {{question.posted_by.first_name}} {{question.posted_by.last_name}}.</p>
+                    </div>
+                  </a>
+                  </div>
+                {% endfor %}
+              {% endif %}
+          </div>
+        </div>
+      </div>
+  </div>
+
+</body>
+</html>

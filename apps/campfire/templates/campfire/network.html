@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campfire</title>
+    <link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Markazi+Text|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mandali" rel="stylesheet">
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href={% static "campfire/css/campfire.css" %}>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script>
+            $(document).ready(function(){
+                $('#smallnav').hide();
+                $("#navdownbtn").click(function(){
+                    $("#smallnav").slideToggle(100);
+                });
+            });
+        </script>
+</head>
+<body>
+    <div class="appbody">
+        <div class="bodycontainer">
+            <div class="appheader">
+                <button id="navdownbtn" class="icon">&#9776;</button>
+                <div id="smallnav">
+                    <a href="/articles">Articles</a>
+                    <a href="/qanda">Q & A</a>
+                    <a id="active" href="/network">Network</a>
+                    <a href="/inbox">Inbox</a>
+                    <a href="#activityfeed">Activity Feed</a>
+                    <a href="/profile">My Profile</a>
+                    <a id="lastsmnav" href="logout">Logout</a>
+                </div>
+                <h1>Campfire</h1>
+                <img src={% static "campfire/img/logo.png" %}>
+            </div>
+            <div id="largenav">
+                <a href="/articles">Articles</a>
+                <a href="/qanda">Q & A</a>
+                <a id="active" href="/network">Network</a>
+                <a href="/inbox">Inbox</a>
+                <a href="#activityfeed">Activity Feed</a>
+                <a href="/profile">My Profile</a>
+                <a href="logout">Logout</a>
+            </div>
+            <div>
+                <div class="netcontain">
+                    {% if user_profiles %}
+                    {% for user_profile in user_profiles %}
+                    <a class="netlink" href="#profile">
+                        <div class="networkcard">
+                            <img class="networkpic"  src="../../static/campfire/img/user_icon.png" alt="Profile img">
+                            <div class="networkinfo">
+                                <h2>{{user_profile.user.first_name}} {{user_profile.user.last_name}}</h2>
+                                <p>Title: {{user_profile.job_title}}</p>
+                                <p>Location: {{user_profile.location}}</p>
+                                <p>URL: {{user_profile.url}}</p>
+                            </div>
+                        </div></a>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+          </div>
+      </div>
+
+</body>
+</html>

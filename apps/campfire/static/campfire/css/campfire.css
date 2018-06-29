@@ -1,0 +1,1432 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid white; */
+}
+/* ------------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 480px){
+
+    /* SPLASH PAGE CSS */
+    
+    body{
+        background-image: url(../../campfire/img/campfire_mobile.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-color: #003438;
+        
+    }
+
+    .classred{
+        font-family: Roboto;
+        color:red;
+        font-size: 4vw;
+        margin-right: 3vw;
+    }
+
+    .splashcontainer{
+        text-align: center;
+        margin-top: 5vw;
+        margin-left: .5vw;
+        width: 90vw;
+    }
+
+    .brand{
+        width:95%;
+        margin:auto;
+        text-align: center;
+    }
+
+    .brand h1{
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        font-size: 23vw;
+        text-shadow: 2px 2px 3px #000;
+        margin: -1vw 0vw;
+    }
+
+    .brand h3{
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        font-size: 6vw;
+        text-shadow: 2px 2px 3px #000;
+        margin-left:6vw;
+    }
+
+    .splashbtn{
+        width: 80vw;
+        height: 10vh;
+        background-color: rgb(0,0,0, 0.7);
+        color: white;
+        border-radius: 1.5vw;
+        font-size: 10vw;
+        text-align: center;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-left: 7vw;
+        border:1px white solid;
+    }
+
+    .splashform{
+        width:95%;
+        margin:4vw auto;
+        text-align: center;
+
+    }
+
+    #logbtn{
+        margin-top:20vh;
+    }
+
+    .brand{
+        color: #f7f7f7;
+    }
+
+    label{
+        display:block;
+        width: 80vw;
+        font-size: 5vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-left:6vw;
+        margin-top:-2vw;
+        margin-bottom:-2vw;
+    }
+
+    .logreginput{
+        display:block;
+        color: #f7f7f7;
+        width: 78vw;
+        border:none;
+        border-radius: 1vw;
+        font-size: 5vw;
+        background-color: rgb(0,0,0, 0.7);
+        padding:1vw;
+        margin-left:6.25vw;
+        border:1px white solid;
+    }
+
+    .formbtn{
+        border:1px white solid;
+        border-radius: 1vw;
+        font-size: 7vw;
+        background-color: rgb(0,0,0, 0.7);
+        padding:3vw;
+        margin: 3vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-left:15vw;
+    }
+
+    .innerform{
+        width:80vw;
+    }
+
+    .classred{
+        color:red;
+        font-size:5vw;
+        text-align: center;
+        text-shadow: 2px 2px 3px #000;
+        font-family: 'Mandali', sans-serif;
+        margin-left:15vw;
+        width:80vw;
+    }
+/* ---------------------------------------------------------------- */
+    /* NAVBAR */
+
+    #largenav{
+        display:none;
+    }
+
+    #smallnav{
+        position:absolute;
+        background-color: rgb(0,0,0, 0.9);
+        width:70vw;
+        margin-left:4vw;
+        border-radius: 1vw;
+    }
+    #smallnav a{
+        color:white;
+        text-decoration: none;
+        display:block;
+        padding: 1vw;
+        margin: 1vw 2vw;
+        font-family: Roboto;
+        font-size: 7vw;
+        text-align: left;
+        border-bottom: 1px solid white;
+    }
+
+    #lastsmnav {
+        border-bottom: none !important;
+    }
+
+    .navdown{
+        background-color: #424242;
+    }
+
+    #navdownbtn {
+        width:12vw;
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        background-color: #212121;
+        margin-top:0.5vh;
+        font-size: 12vw;
+        border:none;
+        vertical-align: top;
+        text-shadow: 2px 2px 3px #000;
+    }
+    /* ---------------------------------------------------------------- */
+     /* HEADER CSS */
+
+     .bodycontainer{
+        width:100vw;
+        height:100vh;
+        background-color: #212121;
+        background-size: cover;
+        padding-bottom:5vw;
+    }
+
+    .appheader{
+        text-align: center;
+        color:white
+    }
+    .appheader h1{
+        display:inline-block;
+        width: 60%;
+        vertical-align: top;
+        font-size: 13vw;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin: -3vw 0vw;
+    }
+    .appheader img{
+        display: inline-block;
+        width:15%;
+        margin-top:1.2vh;
+    }
+
+     /* ---------------------------------------------------------------- */
+
+    /* NETWORK PAGE */
+
+    .netcontain{
+        padding-left:8vw
+    }
+
+    .networkcard{
+        width:80vw;
+        margin: 2vw 1vw;
+        border:2px solid white;
+        border-radius: 1vw;
+        box-shadow:2px 2px 2px 2px #000;
+        display: inline-block;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+
+    .networkpic{
+        border: 2px solid white;
+        border-radius: 50%;
+        width:15vw;
+        display:inline-block;
+        margin:2.5vw 1vw;
+        vertical-align: top;
+    }
+
+    .networkinfo{
+        width:60vw;
+        display:inline-block;
+        vertical-align: top;
+
+    }
+
+    .networkinfo h2{
+        font-size: 5vw;
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        text-align: left;
+        line-height: 6vw;
+    }
+
+    .networkinfo p{
+        font-size:4vw;
+        color: white;
+        font-family: 'Mandali', sans-serif;
+        line-height: 5vw;
+    }
+
+    /* ---------------------------------------------------------------- */
+    /* PROFILE AND PROFILE EDIT PAGE */
+
+    .profile_container{
+        width:90vw;
+        margin: 1vw auto;
+    }
+
+    .profilepic{
+        display:block;
+        width: 80vw;
+        margin:1vw auto;
+    }
+
+    .userinfo{
+        display:block;
+        width:95vw;
+    }
+
+    .profilepic h2{
+        margin-bottom:1vw;
+        font-size: 6vw;
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+    .profilepic img{
+        border: 2px solid white;
+        border-radius: 50%;
+        width:60vw;
+        display:block;
+        margin:1vw auto;
+
+    }
+
+    .userinfo p{
+        font-size:4vw;
+        color: white;
+        font-family: 'Mandali', sans-serif;
+
+    }
+
+    .editprofile{
+        background-color: rgb(0,0,0, 0.8);
+        color:white;
+        width: 80vw;
+        height:4vw;
+        padding:0.5vw;
+        border: 1px solid white;
+        border-radius: 1vw;
+        font-size: 4vw;
+    }
+
+    #bioedit{
+        background-color: rgb(0,0,0, 0.8);
+        color:white;
+        resize: none;
+        width: 80vw;
+        height:40vw;
+        padding:0.5vw;
+        border: 1px solid white;
+        border-radius: 1vw;
+        font-size: 4vw;
+    }
+
+    .editbtn{
+        width: 14.5vw;
+        font-size: 4vw;
+        border:1px white solid;
+        border-radius: 1vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:0vw 1vw;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        margin-right: 8vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    #editlink{
+        text-decoration: none;
+        padding:0vw 1vw;
+    }
+
+    #profID{
+        margin-top: -3vw;
+        margin-left: -3vw;
+    }
+
+}
+/* ------------------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 481px) and (max-width: 1024px){
+
+    /* SPLASH PAGE CSS */
+    
+    body{ 
+        background-image: url(../../campfire/img/campfire_tablet.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: #63c7cc;
+    }
+    .splashcontainer{
+        position:relative;
+        text-align: center;
+        vertical-align: middle;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .brand{
+        width:95%;
+        margin: auto;
+        text-align: center;
+        margin-top: 5vh;
+    }
+
+    .splashbtn{
+        width: 50vw;
+        height: 10vh;
+        background-color: rgb(0,0,0, 0.8);
+        color: white;
+        border-radius: 1vw;
+        font-size: 5vw;
+        text-align: center;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        border:1px white solid;
+    }
+
+    .splashform{
+        width:95%;
+        margin:4vw auto;
+        text-align: center;
+
+    }
+
+    #logbtn{
+        margin-top:15vh;
+    }
+
+    label{
+        width: 48vw;
+        font-size: 3vw;
+        display:block;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-left:22vw;
+    }
+
+    .logreginput{
+        width: 48vw;
+        font-size: 3vw;
+        display:block;
+        color: #f7f7f7;
+        border:none;
+        border-radius: 1vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:1vw;
+        margin-left:22vw;
+        border:1px white solid;
+    }
+
+    .formbtn{
+        width: 20vw;
+        font-size: 3vw;
+        border:1px white solid;
+        border-radius: 1vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:1vw;
+        margin: 3vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-left:15vw;
+    }
+
+    .innerform{
+        width:80vw;
+    }
+
+    .brand{
+        color: #f7f7f7;
+    }
+
+    .brand h1{
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        font-size: 15vw;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    .brand h3{
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        font-size: 5vw;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    .classred{
+        color:red;
+        font-size:3vw;
+        text-align: center;
+        text-shadow: 2px 2px 3px #000;
+        font-family: 'Mandali', sans-serif;
+        margin-left:13vw;
+    }
+
+    /* ---------------------------------------------------------------- */
+    /* NAVBAR */
+
+    #navdownbtn{
+        display: none;
+    }
+
+    #smallnav{
+        display: none;
+    }
+
+    #largenav {
+        width:100%;
+        background-color: #424242;
+        box-shadow: 0px 0px 1px 1px #000;
+        padding-left:10vw;
+      }
+      
+    #largenav a {
+        display: inline-block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 0.7vw 1.5vw;
+        text-decoration: none;
+        font-size: 2vw;
+        font-family: Roboto;
+        margin-left:0vw; 
+    }
+
+    #active{
+        background-color:#616161;
+    }
+     
+      /* ---------------------------------------------------------------- */
+     /* HEADER CSS */
+
+     .bodycontainer{
+        background-color: #212121;
+        box-shadow: 0px 0px 3px 3px #000;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+        overflow-x:hidden;
+        overflow-y: auto;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    .appheader{
+        margin: -1vw 0vw;
+        position:relative;
+        color:white
+    }
+    .appheader h1{
+        margin-left: 35vw;
+        display:inline-block;
+        width: 20vw;
+        vertical-align: top;
+        font-size: 6vw;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-top:-1.2vw;
+        margin-bottom:-0.6vw;
+    }
+    .appheader img{
+        display: inline-block;
+        width:6vw;
+        margin-top:1.85vw;
+        margin-left: 4vw;
+    }
+
+    .appheader button{
+        position: absolute;
+        left: 80%;
+        top: 2vh;
+    }
+
+    /* ---------------------------------------------------------------- */
+    /* PROFILE AND PROFILE EDIT PAGE */
+
+    .profile_container{
+        width:90vw;
+        margin: 1vw auto;
+    }
+
+    .profilepic{
+        display:inline-block;
+        width: 26vw;
+        vertical-align: top;
+    }
+
+    .userinfo{
+        display:inline-block;
+        width:50vw;
+        margin-left:.5vw;
+    }
+
+    .profilepic h2{
+        margin-bottom:1vw;
+        font-size: 4vw;
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+    .profilepic img{
+        border: 2px solid white;
+        border-radius: 50%;
+        width:25vw;
+        display:block;
+        margin:0 auto;
+    }
+
+    .userinfo p{
+        font-size:2vw;
+        color: white;
+        font-family: 'Mandali', sans-serif;
+
+    }
+
+    .editprofile{
+        background-color: rgb(0,0,0, 0.8);
+        color:white;
+        width: 50vw;
+        height:1vw;
+        padding:1vw;
+        border: 1px solid white;
+        border-radius: 0.5vw;
+        font-size: 2vw;
+        display:block;
+    }
+
+    #bioedit{
+        background-color: rgb(0,0,0, 0.8);
+        color:white;
+        resize: none;
+        width: 50vw;
+        height:20vw;
+        padding:1vw;
+        border: 1px solid white;
+        border-radius: 0.5vw;
+        font-size: 2vw;
+    }
+
+    .editbtn{
+        width: 8vw;
+        font-size: 2vw;
+        border:1px white solid;
+        border-radius: 0.5vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:0vw 1vw;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        margin-right: 8vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    #editlink{
+        text-decoration: none;
+        padding:0vw 1vw;
+    }
+
+     /* ---------------------------------------------------------------- */
+
+    /* NETWORK PAGE */
+
+    .netcontain{
+        padding-left:7vw
+    }
+
+    .networkcard{
+        width:40vw;
+        margin: 1vw;
+        border:2px solid white;
+        border-radius: 1vw;
+        box-shadow:2px 2px 2px 2px #000;
+        display: inline-block;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+
+    .networkpic{
+        border: 2px solid white;
+        border-radius: 50%;
+        width:8vw;
+        display:inline-block;
+        margin:2.5vw 1vw;
+        vertical-align: top;
+    }
+
+    .networkinfo{
+        width:28vw;
+        display:inline-block;
+        vertical-align: top;
+
+    }
+
+    .networkinfo h2{
+        font-size: 2vw;
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        text-align: left;
+    }
+
+    .networkinfo p{
+        font-size:1.5vw;
+        color: white;
+        font-family: 'Mandali', sans-serif;
+    }
+
+
+}
+/* ------------------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 1025px){
+
+    /* SPLASH PAGE CSS */
+    body{
+        background-color: #2b3960;
+    }
+
+    .splashcontainer{
+        text-align: center;
+        vertical-align: middle;
+        background-image: url(../../campfire/img/campfire_desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 76vw;
+        height: 100vh;
+        margin: 0 auto;
+        
+    }
+
+    .splashbtn{
+        width: 17vw;
+        height: 8vh;
+        background-color: rgb(0,0,0, 0.7);
+        color: white;
+        border-radius: 0.5vw;
+        font-size: 2vw;
+        text-align: center;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin:0.5vh;
+    }
+
+    .splashform{
+        width:95%;
+        margin:auto;
+        text-align: center;
+    }
+
+    #logbtn{
+        margin-top:20vh;
+    }
+
+    label{
+        width: 15vw;
+        font-size: 1.25vw;
+        display:block;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-left:28.5vw;
+        margin-top:-1vh;
+        margin-bottom:-1vh;
+    }
+
+    .logreginput{
+        width: 15vw;
+        font-size: 1vw;
+        display:block;
+        color: #f7f7f7;
+        border:none;
+        border-radius: 0.5vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:0.5vw;
+        margin-left:28vw;
+        border:1px white solid;
+    }
+
+    .formbtn{
+        width: 10vw;
+        font-size: 1.5vw;
+        border:1px white solid;
+        border-radius: 0.5vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:0.5vw;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        margin-right: 8vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+
+    }
+
+    .innerform{
+        width:80vw;
+    }
+    .brand{
+        width:95%;
+        margin:auto;
+        text-align: center;
+        
+    }
+
+    .brand h1{
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        font-size: 10vw;
+        text-shadow: 2px 2px 3px #000;
+        margin:-2vw 0vw;
+    }
+
+    .brand h3{
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        font-size: 3vw;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    .classred{
+        color:red;
+        font-size:1vw;
+        text-align: center;
+        text-shadow: 2px 2px 3px #000;
+        font-family: 'Mandali', sans-serif;
+        margin-left:-8vw;
+    }
+
+    /* ---------------------------------------------------------------- */
+    /* NAVBAR */
+
+    #navdownbtn{
+        display: none;
+    }
+
+    #smallnav{
+        display: none;
+    }
+
+    #largenav {
+        width:90vw;
+        background-color: #424242;
+        box-shadow: 0px 0px 1px 1px #000;
+        padding-left:6vw;
+        margin-bottom:2vw;
+      }
+      
+    #largenav a {
+        display: inline-block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 0vh 1vw;
+        text-decoration: none;
+        font-size: 1.7vw;
+        font-family: 'Mandali', sans-serif;
+        margin-left: 0.5vw;
+    }
+
+    #largenav a:hover{
+        background-color:#616161;
+    }
+
+    #active{
+        background-color:#616161;
+    }
+
+      /* ---------------------------------------------------------------- */
+    /* HEADER CSS */
+
+    .bodycontainer{
+        background-color: #212121;
+        box-shadow: 0px 0px 3px 3px #000;
+        width: 80vw;
+        height: 100vh;
+        margin: 0 auto;
+        overflow-x:hidden;
+        overflow-y: auto;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    .appbody{
+        background-image: url(../../campfire/img/desktop_app_bg.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+        background-color: #212121;
+        width:100%;
+
+    }
+    .appheader{
+        margin: -1vw 0vw;
+        position:relative;
+        color:white
+    }
+    .appheader h1{
+        margin-left: 1vw;
+        display:inline-block;
+        width: 20vw;
+        vertical-align: top;
+        font-size: 5vw;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-top:-1.2vw;
+        margin-bottom:-0.6vw;
+    }
+    .appheader img{
+        display: inline-block;
+        width:5vw;
+        margin-top:1.75vw;
+        margin-left: 1vw;
+    }
+
+    .appheader button{
+        position: absolute;
+        left: 80%;
+        top: 2vh;
+    }
+
+    /* ---------------------------------------------------------------- */
+    /* PROFILE AND PROFILE EDIT PAGE */
+
+    .profile_container{
+        width:70vw;
+        margin: 1vw auto;
+    }
+
+    .profilepic{
+        display:inline-block;
+        width: 20vw;
+        vertical-align: top;
+    }
+
+    .userinfo{
+        display:inline-block;
+        width:40vw;
+    }
+
+    .profilepic h2{
+        margin-bottom:1vw;
+        font-size: 2vw;
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+    .profilepic img{
+        border: 2px solid white;
+        border-radius: 50%;
+        width:15vw;
+        display:block;
+        margin:0 auto;
+    }
+
+    .userinfo p{
+        font-size:1vw;
+        color: white;
+        font-family: 'Mandali', sans-serif;
+
+    }
+
+    .editprofile{
+        background-color: rgb(0,0,0, 0.8);
+        color:white;
+        width: 40vw;
+        height:1vw;
+        padding:0.5vw;
+        border: 1px solid white;
+        border-radius: 0.5vw;
+        font-size: 1vw;
+    }
+
+    #bioedit{
+        background-color: rgb(0,0,0, 0.8);
+        color:white;
+        resize: none;
+        width: 40vw;
+        height:10vw;
+        padding:0.5vw;
+        border: 1px solid white;
+        border-radius: 0.5vw;
+        font-size: 1vw;
+    }
+
+    .editbtn{
+        width: 5vw;
+        font-size: 1vw;
+        border:1px white solid;
+        border-radius: 0.5vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:0vw 1vw;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        margin-right: 8vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    #editlink{
+        text-decoration: none;
+        padding:0vw 1vw;
+    }
+
+    /* ---------------------------------------------------------------- */
+
+    /* NETWORK PAGE */
+
+    .netcontain{
+        padding-left:1.3vw;
+    }
+
+    .networkcard{
+        width:23.5vw;
+        margin: 1vw;
+        border:2px solid white;
+        border-radius: 1vw;
+        box-shadow:2px 2px 2px 2px #000;
+        display: inline-block;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+
+    .netlink a:hover {
+        overflow: visible;
+        display:block;
+        width:70vw;
+    }
+
+    .networkpic{
+        border: 2px solid white;
+        border-radius: 50%;
+        width:7vw;
+        display:inline-block;
+        margin:.5vw .3vw;
+        vertical-align: top;
+    }
+
+    .networkinfo{
+        width:15.3vw;
+        display:inline-block;
+        vertical-align: top;
+    }
+
+    .networkinfo h2{
+        font-size: 1.25vw;
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+    .networkinfo p{
+        font-size:1vw;
+        color: white;
+        font-family: 'Mandali', sans-serif;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+
+    /* ---------------------------------------------------------------- */
+
+    /* Q&A PAGE */
+
+    th > label{
+        margin:0vw;
+        margin-left:-5vw;
+    }
+
+    .qandabody{
+        margin-top:2vw;
+    }
+
+    .qabtn{
+        width: 12vw;
+        font-size: 1vw;
+        border:1px white solid;
+        border-radius: 0.5vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:.2vw 1vw;
+        margin-bottom: 1vw;
+        margin-left:3vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    .qandabody a{
+        text-decoration: none;
+        color:white;
+    }
+
+    .questioncontainer{
+        width:75vw;
+        display:block;
+        margin: 1vw auto;
+        font-family: Roboto;
+        border: 2px solid white;
+        border-radius: 1vw;
+        box-shadow:2px 2px 2px 2px #000;
+    }
+
+    .question{
+        display:inline-block;
+        width:65vw;
+        color:white;
+        font-size:1vw; 
+    }
+
+    .question li{
+        margin-left:3vw;
+    }
+
+    .question h3{
+        margin:0.5vw;
+        font-size: 2vw;
+    }
+
+    .question h4{
+        margin:0.25vw;
+        font-size: 1.25vw;
+    }
+
+    .question p{
+        margin:0.25vw;
+        font-size: 1vw;
+    }
+
+    .vote{
+        display:inline-block;
+        width:7vw;
+        vertical-align: top;
+        margin-top: 2vw;
+        margin-left: 2vw;
+        margin-right:-1.75vw;
+    }
+
+    .tag{
+        display:inline-block;
+        background-color: #3498DB;
+        border-radius:0.5vw;
+        padding:0.5vw;
+    }
+
+    /* ---------------------------------------------------------------- */
+
+    /* ANSWER PAGE */
+
+    .answerbody{
+        color:white;
+        font-family: Roboto;
+        border: 2px solid white;
+        border-radius: 1vw;
+        box-shadow:2px 2px 2px 2px #000;
+        padding:1vw;
+        margin:0.75vw;
+    }
+
+    .answers{
+        border: 1px solid white;
+        border-radius: 1vw;
+        box-shadow:2px 2px 2px 2px #000;
+        padding:1vw;
+        margin:0.75vw;
+    }
+
+    .answerform{
+
+    }
+
+    #answerrtf label{
+        display:none;
+    }
+
+    #saveBut{
+        width: 12vw;
+        font-size: 1vw;
+        border:1px white solid;
+        border-radius: 0.5vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:.2vw 1vw;
+        margin-bottom: 1vw;
+        margin-left:1vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    .answerpginner{
+        margin-bottom:3vw;
+    }
+
+    .answerbody a{
+        text-decoration: none;
+        color:white;
+    }
+
+    .answerpginner .tag{
+        margin: 0.25vw;
+    }
+
+    /* ---------------------------------------------------------------- */
+
+    /* QUESTION PAGE */
+
+    .newQuestion button{
+        width: 12vw;
+        font-size: 1vw;
+        border:1px white solid;
+        border-radius: 0.5vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:.2vw 1vw;
+        margin-bottom: 1vw;
+        margin-left:1vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    .newQuestion p{
+        color:white;
+        font-family: Roboto;
+        font-size: 1vw;
+    }
+
+    .helptext{
+        color:white;
+        font-family: Roboto;
+        font-size: 1vw;
+    }
+
+    td > input{
+        width: 15vw;
+        font-size: 1vw;
+        display:block;
+        color: #f7f7f7;
+        border:none;
+        border-radius: 0.5vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:0.5vw;
+        margin:1vw;
+        margin-left:0vw;
+        border:1px white solid;
+    }
+
+    .post-form table{
+        /* margin-left:-33vw; */
+    }
+
+    .post-form p{
+        margin-left: 11vw;
+        margin-bottom:1vw;
+    }
+
+    .qabtn a{
+        color:white;
+        text-decoration: none;
+    }
+
+    /* ---------------------------------------------------------------- */
+
+    /* INBOX */
+
+    .inboxcontainer{
+        width:75vw;
+        display:block;
+        margin: 1vw auto;
+        font-family: Roboto;
+        border: 2px solid white;
+        border-radius: 1vw;
+        box-shadow:2px 2px 2px 2px #000;
+        padding:1vw;
+        color:white;
+    }
+
+    .inboxheader{
+        width:75vw;
+    }
+
+    .inboxheader button{
+        display:inline-block;
+    }
+
+    .searchcontainer{
+        display:inline-block;
+    }
+
+    .messages{
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+
+    .messages thead{
+        width:75vw;
+    }
+
+    .messages th{
+        color: white;
+        font-family: 'Mandali', sans-serif;
+        width:15vw;
+        font-size:1.5vw;
+    }
+
+    .messages tbody{
+        width:75vw;
+    }
+
+    .messages tr{
+        width:75vw;
+    }
+
+    .messages td{
+        color: white;
+        font-family: 'Mandali', sans-serif;
+        width:15vw;
+    }
+
+    .searchcontainer input{
+        background-color: rgb(0,0,0, 0.8);
+        color:white;
+        width: 20vw;
+        height:1vw;
+        padding:0.5vw;
+        border: 1px solid white;
+        border-radius: 0.5vw;
+        font-size: 1vw;
+        margin-left:20vw;
+    }
+
+    .searchcontainer button{
+        width: 7vw;
+        font-size: 1vw;
+        border:1px white solid;
+        border-radius: 0.5vw;
+        background-color: rgb(0,0,0, 0.8);
+        margin-bottom: 1vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    /* ---------------------------------------------------------------- */
+
+    /* NEW MESSAGE */
+
+
+    .post-form input{
+        background-color: rgb(0,0,0, 0.8);
+        color:white;
+        width: 20vw;
+        height:1vw;
+        padding:0.5vw;
+        border: 1px solid white;
+        border-radius: 0.5vw;
+        font-size: 1vw;
+        /* margin-left:20vw; */
+    }
+
+    .post-form button{
+        width: 7vw;
+        font-size: 1vw;
+        border:1px white solid;
+        border-radius: 0.5vw;
+        background-color: rgb(0,0,0, 0.8);
+        margin-top: 2vw;
+        margin-left: 7.5vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    .post-form select{
+        background-color: rgb(0,0,0, 0.8);
+        color:white;
+        width: 20vw;
+        padding:1vw;
+        border: 1px solid white;
+        border-radius: 0.5vw;
+        font-size: 1vw;
+        margin-left:-3vw;
+    }
+
+    .post-form label{
+        width: 10vw;
+        font-size: 1.25vw;
+        display:inline-block;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-left:.5vw;
+        margin-top:-1vh;
+        margin-bottom:-1vh;
+    }
+
+    .post-form table{
+        margin-left: -3vw;
+    }
+
+
+    /* ---------------------------------------------------------------- */
+
+    /* ARTICLES */
+
+    .article{
+        width:75vw;
+        display:block;
+        margin: 1vw auto;
+        font-family: Roboto;
+        border: 2px solid white;
+        border-radius: 1vw;
+        box-shadow:2px 2px 2px 2px #000;
+        padding:1vw;
+        color:white;
+    }
+
+    .article h2{
+        font-size:2vw;
+        margin:0.5vw;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    .article p{
+        font-size:1.35vw;
+        margin:1vw;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    .article a{
+        background-color: #3498DB;
+        border-radius:0.5vw;
+        padding:0.5vw;
+        color:white;
+        text-decoration: none;
+        margin:1vw .5vw;
+    }
+
+    .article span{
+        font-weight: 400;
+        color:yellow;
+        display:block;
+        margin-top:.5vw;
+    }
+
+}

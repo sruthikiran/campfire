@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campfire</title>
+    <link href="https://fonts.googleapis.com/css?family=Markazi+Text|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mandali" rel="stylesheet">
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href={% static "campfire/css/campfire.css" %}>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+            $(document).ready(function(){
+                $('#smallnav').hide();
+                $("#navdownbtn").click(function(){
+                    $("#smallnav").slideToggle(100);
+                });
+            });
+        </script>
+</head>
+<body>
+    <div class="appbody">
+        <div class="bodycontainer">
+            <div class="appheader">
+                <button id="navdownbtn" class="icon">&#9776;</button>
+                <div id="smallnav">
+                    <a href="/articles">Articles</a>
+                    <a href="/qanda">Q & A</a>
+                    <a href="/network">Network</a>
+                    <a href="/inbox">Inbox</a>
+                    <a href="#activityfeed">Activity Feed</a>
+                    <a href="/profile">My Profile</a>
+                    <a id="lastsmnav" href="logout">Logout</a>
+                </div>
+                <h1>Campfire</h1>
+                <img src={% static "campfire/img/logo.png" %}>
+            </div>
+            <div id="largenav">
+                <a href="/articles">Articles</a>
+                <a href="/qanda">Q & A</a>
+                <a href="/network">Network</a>
+                <a id="active" href="/inbox">Inbox</a>
+                <a href="#activityfeed">Activity Feed</a>
+                <a href="/profile">My Profile</a>
+                <a href="logout">Logout</a>
+            </div>
+
+
+            
+    <h3>{{msg.subject}}</h3>
+    <hr>
+    {{msg.content}}
+    <hr>
+    {% if replies %}
+      {% for reply in replies %}
+        <div class="replies">
+          {{reply.content}}
+          <br>
+          <br>
+          replied_by {{reply.sent_by.first_name}} {{reply.sent_by.last_name}} at {{reply.created_at}}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <!-- <div class="placeholder"></div> -->
+    <form class="post-form" id="newAns" action="/createReply" method="post">
+      {% csrf_token %}
+      <table>
+        {{ form.media }}
+        {{ form }}
+      </table>
+      <input type="hidden" name="toId" value="{{msg.sent_by.id}}">
+      <input type="hidden" name="msgId" value="{{msg.id}}">
+      <button type="submit" id="saveBut">Save</button>
+    </form>
+
+    <!-- <script>
+      $('#saveBut').click(function() {
+          console.log('serialized info', $('#newAns').serialize());
+          console.log('preparing to send an Ajax request for the answers');
+          $.ajax({
+             method: "POST",
+             url: $('#newAns').attr('action'),
+             data: $('#newAns').serialize(),
+             success: function( response ) {
+               console.log('received response:', response)
+               $('.placeholder').html(response)
+             }
+          });
+          return false;
+      });
+    </script> -->
+        </div>
+    </div>
+
+</body>
+</html>

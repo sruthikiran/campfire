@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campfire</title>
+    <link href="https://fonts.googleapis.com/css?family=Markazi+Text|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mandali" rel="stylesheet">
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href={% static "campfire/css/campfire.css" %}>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('#logform').hide();
+            $('#regform').hide();
+            $("#logbtn").click(function(){
+                $("#logform").slideToggle(100);
+                $('#regform').hide();
+                $('#logbtn').css('margin-top', '1vh');
+            });
+            $("#regbtn").click(function(){
+                $("#regform").slideToggle(100);
+                $('#logform').hide();
+                $('#logbtn').css('margin-top', '1vh');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="splashcontainer">
+        <div class="brand">
+            <div class="tablet-bg">
+                <h1>Campfire</h1>
+                <h3>Circle up on your tech career</h3>
+            </div>
+        </div>
+
+        <div class="splashform" id="login">
+            <button class="splashbtn" id="logbtn">Login</button>
+            <div class="innerform">
+                <form id="logform"  class="innerform" action="/log_reg" method='POST'>
+                    {% csrf_token %}
+                    {% if messages %}
+                      {% for message in messages %}
+                        {% if 'login' in message.tags %}
+                        <span class= "classred" > {{ message }}</span>
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
+                    <div>
+                        <label for="Email1">Email address</label>
+                        <input class="logreginput" type="email" id="Email1" name="email" value="">
+                    </div>
+                    <div>
+                        <label for="Pwd1">Password</label>
+                        <input class="logreginput" type="password"  id="Pwd1" name="loginpwd" >
+                    </div>
+                    <button class="formbtn" type="submit" name="attempt" value="login">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="splashform" id="reg">
+            <button class="splashbtn" id="regbtn">Registration</button>
+                <div class="innerform">
+                <form id="regform" action="log_reg" method="post">
+                      {% csrf_token %}
+                    <div>
+                        <label for="firstName">First Name</label>
+                        {% if messages %}
+                          {% for message in messages %}
+                            {% if 'firstname' in message.tags %}
+                            <span class= "classred" > {{ message }}</span>
+                            {% endif %}
+                          {% endfor %}
+                        {% endif %}
+                        <input class="logreginput" type="text"  id="firstName" name="firstName" value="">
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name</label>
+                        {% if messages %}
+                          {% for message in messages %}
+                            {% if 'lastname' in message.tags %}
+                            <span class= "classred" > {{ message }}</span>
+                            {% endif %}
+                          {% endfor %}
+                        {% endif %}
+                        <input class="logreginput" type="text"  id="lastName" name="lastName" value="">
+                    </div>
+                    <div>
+                        <label for="Email1">Email address</label>
+                        {% if messages %}
+                          {% for message in messages %}
+                            {% if 'email' in message.tags %}
+                            <span class= "classred" > {{ message }}</span>
+                            {% endif %}
+                          {% endfor %}
+                        {% endif %}
+                        <input class="logreginput" type="email"  id="Email1" aria-describedby="emailHelp" name="email" value="">
+                    </div>
+                    <div>
+                        <label for="Password1">Password</label>
+                        {% if messages %}
+                          {% for message in messages %}
+                            {% if 'pwd' in message.tags %}
+                            <span class= "classred" > {{ message }}</span>
+                            {% endif %}
+                          {% endfor %}
+                        {% endif %}
+                        <input class="logreginput" type="password"  id="Password1" name="pwd" >
+                      </div>
+                    <div>
+                        <label for="confPassword1">Confirm Password</label>
+                        {% if messages %}
+                          {% for message in messages %}
+                            {% if 'confpwd' in message.tags %}
+                            <span class= "classred" > {{ message }}</span>
+                            {% endif %}
+                          {% endfor %}
+                        {% endif %}
+                        <input class="logreginput" type="password" id="confPassword1" name="confpwd">
+                    </div>
+                    <button class="formbtn" type="submit" name="attempt" value="register">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

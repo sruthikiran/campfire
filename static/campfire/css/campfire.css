@@ -1,0 +1,568 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* ------------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 480px){
+
+    /* SPLASH PAGE CSS */
+    
+    body{
+        background-image: url(../../campfire/img/campfire_mobile.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-color: #003438;
+        
+    }
+
+    .classred{
+        font-family: Roboto;
+        color:red;
+        font-size: 4vw;
+        margin-right: 3vw;
+    }
+
+    .splashcontainer{
+        text-align: center;
+        margin-top: 5vw;
+        margin-left: .5vw;
+        width: 90vw;
+    }
+
+    .brand{
+        width:95%;
+        margin:auto;
+        text-align: center;
+    }
+
+    .brand h1{
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        font-size: 24vw;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    .brand h3{
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        font-size: 6vw;
+        text-shadow: 2px 2px 3px #000;
+        margin-left:6vw;
+    }
+
+    .splashbtn{
+        width: 80vw;
+        height: 10vh;
+        background-color: rgb(0,0,0, 0.7);
+        color: white;
+        border-radius: 1.5vw;
+        font-size: 10vw;
+        text-align: center;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-left: 7vw;
+        border:1px white solid;
+    }
+
+    .splashform{
+        width:95%;
+        margin:4vw auto;
+        text-align: center;
+
+    }
+
+    #logbtn{
+        margin-top:30vh;
+    }
+
+    .brand{
+        color: #f7f7f7;
+    }
+
+    label{
+        display:block;
+        width: 80vw;
+        font-size: 7vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-left:6vw;
+    }
+
+    input{
+        display:block;
+        color: #f7f7f7;
+        width: 79vw;
+        border:none;
+        border-radius: 1vw;
+        font-size: 7vw;
+        background-color: rgb(0,0,0, 0.7);
+        padding:1vw;
+        margin-left:6.25vw;
+        border:1px white solid;
+    }
+
+    .formbtn{
+        border:1px white solid;
+        border-radius: 1vw;
+        font-size: 7vw;
+        background-color: rgb(0,0,0, 0.7);
+        padding:3vw;
+        margin: 3vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-left:15vw;
+    }
+
+    .innerform{
+        width:80vw;
+    }
+/* ---------------------------------------------------------------- */
+    /* NAVBAR */
+
+    #largenav{
+        display:none;
+    }
+
+    #topnav{
+
+    }
+
+    #smallnav{
+        position:absolute;
+        background-color: rgb(0,0,0, 0.7);
+        width:70vw;
+        margin-left:2vw;
+    }
+    #smallnav a{
+        color:white;
+        text-decoration: none;
+        display:block;
+        padding: 1vw;
+        font-family: Roboto;
+        font-size: 7vw;
+        text-align: left;
+    }
+
+    #smallnav a:hover{
+        background-color:#BDBDBD;
+    }
+
+
+    .navdown{
+        background-color: #424242;
+    }
+
+    #navdownbtn {
+        width:12vw;
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        background-color: rgb(0,0,0, 0.7);
+        padding:2vw 3vw;
+        margin-top:2vh;
+        font-size: 5vw;
+        border-radius: 1vw;
+        vertical-align: top;
+    }
+    /* ---------------------------------------------------------------- */
+     /* APP PAGE CSS */
+
+     .bodycontainer{
+        width:100vw;
+        background-color: #2b3960;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .appheader{
+        text-align: center;
+        color:white
+    }
+    .appheader h1{
+        display:inline-block;
+        width: 60%;
+        vertical-align: top;
+        font-size: 15vw;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+    }
+    .appheader img{
+        display: inline-block;
+        width:15%;
+        margin-top:1vh;
+    }
+}
+/* ------------------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 481px) and (max-width: 1024px){
+
+    /* SPLASH PAGE CSS */
+
+    body{ 
+        background-image: url(../../campfire/img/campfire_tablet.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: #63c7cc;
+    }
+    .splashcontainer{
+        position:relative;
+        text-align: center;
+        vertical-align: middle;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .brand{
+        width:95%;
+        margin: auto;
+        text-align: center;
+        margin-top: 5vh;
+    }
+
+    .splashbtn{
+        width: 50vw;
+        height: 10vh;
+        background-color: rgb(0,0,0, 0.8);
+        color: white;
+        border-radius: 1vw;
+        font-size: 5vw;
+        text-align: center;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        border:1px white solid;
+    }
+
+    .splashform{
+        width:95%;
+        margin:4vw auto;
+        text-align: center;
+
+    }
+
+    #logbtn{
+        margin-top:30vh;
+    }
+
+    label{
+        width: 48vw;
+        font-size: 3vw;
+        display:block;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-left:22vw;
+    }
+
+    input{
+        width: 48vw;
+        font-size: 3vw;
+        display:block;
+        color: #f7f7f7;
+        border:none;
+        border-radius: 1vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:1vw;
+        margin-left:22vw;
+        border:1px white solid;
+    }
+
+    .formbtn{
+        width: 20vw;
+        font-size: 3vw;
+        border:1px white solid;
+        border-radius: 1vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:1vw;
+        margin: 3vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-left:15vw;
+    }
+
+    .innerform{
+        width:80vw;
+    }
+
+    h1{
+        font-size:15vw;
+        font-family: 'Roboto', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    h3{
+        font-size:4vw;
+        font-family: 'Roboto', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    .brand{
+        color: #f7f7f7;
+    }
+
+    .brand h1{
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        font-size: 15vw;
+    }
+
+    .brand h3{
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        font-size: 5vw;
+    }
+
+    /* ---------------------------------------------------------------- */
+    /* NAVBAR */
+
+    #navdownbtn{
+        display: none;
+    }
+
+    #smallnav{
+        display: none;
+    }
+
+    #largenav {
+        width:100%;
+        background-color: #424242;
+        box-shadow: 0px 0px 1px 1px #000;
+        padding-left:5vw;
+      }
+      
+    #largenav a {
+        display: inline-block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 2vw;
+        font-family: Roboto;
+        margin-left:0vw; 
+    }
+     
+      /* ---------------------------------------------------------------- */
+     /* APP PAGE CSS */
+
+    .bodycontainer{
+        background-color: #2b3960;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .appheader{
+        text-align: center;
+        color:white
+    }
+    .appheader h1{
+        display:inline-block;
+        width: 79%;
+        vertical-align: top;
+        font-size: 15vw;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+    }
+    .appheader img{
+        display: inline-block;
+        width:19%;
+        margin-top:1vh;
+    }
+
+}
+/* ------------------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 1025px){
+
+    /* SPLASH PAGE CSS */
+    body{
+        background-color: #2b3960;
+    }
+
+    .splashcontainer{
+        text-align: center;
+        vertical-align: middle;
+        background-image: url(../../campfire/img/campfire_desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 76vw;
+        height: 100vh;
+        margin: 0 auto;
+        
+    }
+
+    .splashbtn{
+        width: 17vw;
+        height: 8vh;
+        background-color: rgb(0,0,0, 0.7);
+        color: white;
+        border-radius: 0.5vw;
+        font-size: 2vw;
+        text-align: center;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin:0.5vh;
+    }
+
+    .splashform{
+        width:95%;
+        margin:auto;
+        text-align: center;
+    }
+
+    #logbtn{
+        margin-top:25vh;
+    }
+
+    label{
+        width: 15vw;
+        font-size: 1.25vw;
+        display:block;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+        margin-left:28.5vw;
+    }
+
+    input{
+        width: 15vw;
+        font-size: 1vw;
+        display:block;
+        color: #f7f7f7;
+        border:none;
+        border-radius: 0.5vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:0.5vw;
+        margin-left:28vw;
+        border:1px white solid;
+    }
+
+    .formbtn{
+        width: 10vw;
+        font-size: 1.5vw;
+        border:1px white solid;
+        border-radius: 0.5vw;
+        background-color: rgb(0,0,0, 0.8);
+        padding:0.5vw;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        margin-right: 8vw;
+        color: #f7f7f7;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+
+    }
+
+    .innerform{
+        width:80vw;
+    }
+
+    h3{
+        font-size:2vw;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .brand{
+        width:95%;
+        margin:auto;
+        text-align: center;
+        
+    }
+
+    .brand h1{
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        font-size: 10vw;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+    .brand h3{
+        font-family: 'Mandali', sans-serif;
+        color: white;
+        font-size: 3vw;
+        text-shadow: 2px 2px 3px #000;
+    }
+    /* ---------------------------------------------------------------- */
+    /* NAVBAR */
+
+    #navdownbtn{
+        display: none;
+    }
+
+    #smallnav{
+        display: none;
+    }
+
+    #largenav {
+        width:77.7vw;
+        background-color: #424242;
+        box-shadow: 0px 0px 1px 1px #000;
+        padding-left:2.3vw;
+      }
+      
+    #largenav a {
+        display: inline-block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: .5vh 1vw;
+        text-decoration: none;
+        font-size: 1.7vw;
+        font-family: 'Mandali', sans-serif;
+        margin-left: 0.5vw;
+    }
+
+    #largenav a:hover{
+        background-color:#616161;
+    }
+
+      /* ---------------------------------------------------------------- */
+    /* APP PAGE CSS */
+
+    .bodycontainer{
+        background-color: #212121;
+        box-shadow: 0px 0px 3px 3px #000;
+        width: 80vw;
+        height: 100vh;
+        margin: 0 auto;
+    }
+
+    .appbody{
+        background-image: url(../../campfire/img/desktop_app_bg.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+        background-color: #212121;
+        width:100%;
+
+    }
+    .appheader{
+        position:relative;
+        color:white
+    }
+    .appheader h1{
+        margin-left: 1vw;
+        display:inline-block;
+        width: 20vw;
+        vertical-align: top;
+        font-size: 5vw;
+        font-family: 'Mandali', sans-serif;
+        text-shadow: 2px 2px 3px #000;
+    }
+    .appheader img{
+        display: inline-block;
+        width:5vw;
+        margin-top:3vw;
+        margin-left: 1vw;
+    }
+
+    .appheader button{
+        position: absolute;
+        left: 80%;
+        top: 2vh;
+    }
+}

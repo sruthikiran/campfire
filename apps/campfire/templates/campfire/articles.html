@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campfire</title>
+    <link href="https://fonts.googleapis.com/css?family=Markazi+Text|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mandali" rel="stylesheet">
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href={% static "campfire/css/campfire.css" %}>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script>
+            $(document).ready(function(){
+                $('#smallnav').hide();
+                $("#navdownbtn").click(function(){
+                    $("#smallnav").slideToggle(100);
+                });
+            });
+        </script>
+</head>
+<body>
+    <div class="appbody">
+        <div class="bodycontainer">
+            <div class="appheader">
+                <button id="navdownbtn" class="icon">&#9776;</button>
+                <div id="smallnav">
+                    <a href="/articles">Articles</a>
+                    <a href="/qanda">Q & A</a>
+                    <a href="/network">Network</a>
+                    <a href="/inbox">Inbox</a>
+                    <a href="#activityfeed">Activity Feed</a>
+                    <a href="/profile">My Profile</a>
+                    <a id="lastsmnav" href="logout">Logout</a>
+                </div>
+                <h1>Campfire</h1>
+                <img src={% static "campfire/img/logo.png" %}>
+            </div>
+            <div id="largenav">
+                <a href="/articles">Articles</a>
+                <a href="/qanda">Q & A</a>
+                <a href="/network">Network</a>
+                <a href="/inbox">Inbox</a>
+                <a href="#activityfeed">Activity Feed</a>
+                <a href="/profile">My Profile</a>
+                <a href="logout">Logout</a>
+            </div>
+
+
+            <div class="articlescontainer">
+
+              {% for i in articles %}
+              <div class="article">
+                {{i.title}}
+                {{i.snippet}}
+                {{i.link}}
+              </div>
+              {% endfor %}
+
+                <div class="article">
+                <h2>How to read your way to becoming a better developer</h2>
+                <p>If you want to get better at programming, there are two things you need to do:
+                <span>Write Code and Read Everything!!!</span></p>
+                <p>Software Architect Nolan Grace shares his thoughts on being better at programming</p>
+                <a href="https://medium.freecodecamp.org/how-to-read-your-way-to-becoming-a-better-developer-b6432fa5bc0c">Read the full article here</a>
+              </div>
+          
+              <div class="article">
+                <h2>Please don’t learn to code</h2>
+                <p>What happens to the person who spent night and day studying Objective-C only to be horrified by the Swift announcement at WWDC 2014? </p>
+                <p>Basel Farag, an iOS developer perfectly sums up the plight of a coder in this TechCrunch article. He explains why the line between
+                learning to code and getting paid to program as a profession is not an easy line to cross.</p>
+                <a href="https://techcrunch.com/2016/05/10/please-dont-learn-to-code/">Read the full article here.</a>
+              </div>
+          
+              <div class="article">
+                <h2>Someone got Windows 95 running on an Apple Watch</h2>
+                <p>For some reason, developers can’t seem to resist taking classic games and apps and putting them on platforms that they were never meant to run on.</p>
+                <p>Developer Nick Lee showed us all what it feels to run Windows 95 on an Apple Watch. It’s slow but definitely appears to be more functional than you’d expect.</p>
+                <a href="https://www.theverge.com/circuitbreaker/2016/4/29/11541614/apple-watch-running-windows-95-video">Watch it here!</a>
+              </div>
+          
+              <div class="article">
+                <h2>Facebook considers letting users add a tip jar to make money from posts</h2>
+                <p>A user survey distributed last month hints at a broad range of ways that users could make money or promote a cause, including a tip jar, branded content, and taking a cut of the ad revenue Facebook earns from posts.</p>
+                <p>The post has got 20k+ shares.</p>
+                <a href="https://www.theverge.com/2016/4/19/11455840/facebook-tip-jar-partner-program-monetization"> Read the full article here</a>
+              </div>
+          
+              <div class="article">
+                <h2>Teenagers react to Windows 95, cannot imagine what their elders endured</h2>
+                <p>The majority of teenagers alive today weren’t alive in the 90s, meaning the oldest version of Windows they’re likely to be familiar with is Windows XP.</p>
+                <p>What happens when a bunch of teenagers are exposed to the wonders of mid-90s computing and Windows 95 for the first time in their lives?</p>
+                <p>They’re not impressed.</p>
+                <a href="https://www.digitaltrends.com/computing/teens-react-windows-95-dial-up/"> Watch it here!</a>
+              </div>
+              </div>
+        </div>
+    </div>
+</body>
+</html>

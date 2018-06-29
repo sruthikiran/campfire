@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campfire</title>
+    <link href="https://fonts.googleapis.com/css?family=Markazi+Text|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mandali" rel="stylesheet">
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href={% static "campfire/css/campfire.css" %}>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script>
+            $(document).ready(function(){
+                $('#smallnav').hide();
+                $("#navdownbtn").click(function(){
+                    $("#smallnav").slideToggle(100);
+                });
+            });
+        </script>
+</head>
+<body>
+    <div class="appbody">
+        <div class="bodycontainer">
+            <div class="appheader">
+                <button id="navdownbtn" class="icon">&#9776;</button>
+                <div id="smallnav">
+                    <a href="/articles">Articles</a>
+                    <a href="/qanda">Q & A</a>
+                    <a href="/network">Network</a>
+                    <a href="/inbox">Inbox</a>
+                    <a href="#activityfeed">Activity Feed</a>
+                    <a href="/profile">My Profile</a>
+                    <a id="lastsmnav" href="logout">Logout</a>
+                </div>
+                <h1>Campfire</h1>
+                <img src={% static "campfire/img/logo.png" %}>
+            </div>
+            <div id="largenav">
+                <a href="/articles">Articles</a>
+                <a href="/qanda">Q & A</a>
+                <a href="/network">Network</a>
+                <a id="active" href="/inbox">Inbox</a>
+                <a href="#activityfeed">Activity Feed</a>
+                <a href="/profile">My Profile</a>
+                <a href="logout">Logout</a>
+            </div>
+
+
+            <div class="newMessage">
+
+                <form class="post-form" id="newQuest" action="createMsg" method="post">
+                  {% csrf_token %}
+                   <label for="recipient">To:</label>
+                   <select id="recipient" name="recipient">
+                     {% for rec in users %}
+                     <option value="{{rec.id}}">{{rec.first_name}} {{rec.last_name}}</option>
+                     {% endfor %}
+                    </select>
+                  <table>
+                    {{ form.media }}
+                    {{ form }}
+                  </table>
+                  <button type="submit" >Save</button>
+                </form>
+        
+              </div>
+        </div>
+    </div>
+
+</body>
+</html>

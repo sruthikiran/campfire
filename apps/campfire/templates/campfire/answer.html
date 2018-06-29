@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campfire</title>
+    <link href="https://fonts.googleapis.com/css?family=Markazi+Text|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mandali" rel="stylesheet">
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href={% static "campfire/css/campfire.css" %}>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script>
+            $(document).ready(function(){
+                $('#smallnav').hide();
+                $("#navdownbtn").click(function(){
+                    $("#smallnav").slideToggle(100);
+                });
+            });
+        </script>
+</head>
+<body>
+    <div class="appbody">
+        <div class="bodycontainer">
+            <div class="appheader">
+                <button id="navdownbtn" class="icon">&#9776;</button>
+                <div id="smallnav">
+                    <a href="/articles">Articles</a>
+                    <a href="/qanda">Q & A</a>
+                    <a href="/network">Network</a>
+                    <a href="/inbox">Inbox</a>
+                    <a href="#activityfeed">Activity Feed</a>
+                    <a href="/profile">My Profile</a>
+                    <a id="lastsmnav" href="logout">Logout</a>
+                </div>
+                <h1>Campfire</h1>
+                <img src={% static "campfire/img/logo.png" %}>
+            </div>
+            <div id="largenav">
+                <a href="/articles">Articles</a>
+                <a id="active" href="/qanda">Q & A</a>
+                <a href="/network">Network</a>
+                <a href="/inbox">Inbox</a>
+                <a href="#activityfeed">Activity Feed</a>
+                <a href="/profile">My Profile</a>
+                <a href="logout">Logout</a>
+            </div>
+
+            <button class="qabtn" type="submit">
+                <a href="/qanda"> Go Back</a> 
+              </button>
+            <div class="answerbody">
+              <div class="answerpginner">
+            {{quest.title|safe}}
+            {{quest.desc|safe}}
+            <h4>Tags:</h4>
+            {% for tag in quest.tags.all %}
+              <p class="tag">{{tag.name}}</p>
+            {% endfor %}
+            <br>
+            <p>Asked at {{quest.created_at}} by {{quest.posted_by.first_name}} {{quest.posted_by.last_name}}.</p>
+            {% if answers %}
+              {% for ans in answers %}
+                <div class="answers">
+                  {{ans.desc|safe}}
+                  <br>
+                  Answered by {{ans.answered_by.first_name}} {{ans.answered_by.last_name}} at {{ans.created_at}}
+                </div>
+              {% endfor %}
+            {% endif %}
+            <div class="placeholder"></div>
+          </div>
+            <div class="rtfstyle">
+            <form class="answerform" id="newAns" action="/createAns" method="post">
+              {% csrf_token %}
+                <table id="answerrtf">
+                  {{ form.media }}
+                  {{ form }}
+                </table>
+              <input type="hidden" name="quesId" value="{{quest.id}}">
+              <button type="submit" id="saveBut">Save</button>
+            </form>
+          </div>
+        
+            <!-- <script>
+              $('#saveBut').click(function() {
+                  console.log('serialized info', $('#newAns').serialize());
+                  console.log('preparing to send an Ajax request for the answers');
+                  $.ajax({
+                     method: "POST",
+                     url: $('#newAns').attr('action'),
+                     data: $('#newAns').serialize(),
+                     success: function( response ) {
+                       console.log('received response:', response)
+                       $('.placeholder').html(response)
+                     }
+                  });
+                  return false;
+              });
+            </script> -->
+        
+        </div>
+    </div>
+  </div>
+</body>
+</html>
